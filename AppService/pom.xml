@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>app_service</groupId>
+	<artifactId>app_service</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>AppService</name>
+
+	<properties>
+		<web-name>AppService</web-name>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spring.version>3.1.1.RELEASE</spring.version>
+	</properties>
+	<dependencies>
+		<!-- spring集成 -->
+		<!-- spring-webmvc包含: spring-context-support： spring-beans： spring-context： 
+			spring-aop： aopalliance： spring-expression： spring-asm： spring-core： commonts-logging： 
+			spring-webmvc：MVC构架是一个全功能的构建web应用程序的MVC实现，通过策略接口，MVC构架变得成为高度可配置的，MVC容纳了大量视图技术（jsp、velocity、Tiles、iText、POI） 
+			spring-web：WEB上下文模块建立在应用程序上下文模块之上，为基于Web的应用程序提供上下文，SO spring框架支持与Jakarta 
+			struts 的集成，且简化了处理多部分请求以及将请求参数绑定到域对象的工作 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- Spring ORM:插入若干个ORM结构，提供ORM对象的相关工具，包括JDO、Hibernate、iBatis SQL Map，所有这些都遵循spring的通用事务和dao异常层次结构 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+
+		<!-- ORM框架 -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.4.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>1.3.1</version>
+		</dependency>
+		
+		<!-- MySql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.18</version>
+		</dependency>
+		
+		<!-- 日志 -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.16</version>
+		</dependency>
+	</dependencies>
+	<build />
+</project>
